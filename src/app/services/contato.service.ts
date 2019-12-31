@@ -9,7 +9,7 @@ export class ContatoService {
   contatos: Contato[];
   constructor(private http: HttpClient) { }
 
-  save(contato: Contato){
+  salvar(contato: Contato){
     this.contatos.push(contato);
     let contatos = [];
     if(localStorage.getItem('contatos') === null) {

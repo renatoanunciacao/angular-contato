@@ -14,10 +14,12 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatListModule } from "@angular/material/list";
 import { MatCardModule } from "@angular/material/card";
-import { MatDialogModule } from "@angular/material/dialog";
-import { MatInputModule } from "@angular/material";
-import { MatFormFieldModule } from "@angular/material/form-field";
 import { HttpClientModule } from '@angular/common/http';
+
+import { ContactsComponent } from './features/contacts/contacts.component';
+import { ListContactsComponent } from './features/list-contacts/list-contacts.component';
+import { MatDialogModule, MatInputModule, MatFormFieldModule, MatOptionModule, MatSelectModule, MatError, MatHint } from '@angular/material';
+import { FormContactsComponent } from './features/form-contacts/form-contacts.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,10 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     DetalheComponent,
     HeaderComponent,
-    SearchComponent
+    SearchComponent,
+    ContactsComponent,
+    ListContactsComponent,
+    FormContactsComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +44,9 @@ import { HttpClientModule } from '@angular/common/http';
     MatCardModule,
     MatDialogModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatOptionModule,
+    MatSelectModule    
   ],
   providers: [],
   bootstrap: [AppComponent]
