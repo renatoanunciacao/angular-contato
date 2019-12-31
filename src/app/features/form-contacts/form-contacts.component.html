@@ -1,13 +1,13 @@
-<form class="example-form">
+<form class="example-form" (submit)="addContact(nome,email,telefone)">
     <mat-form-field class="width-box">
-        <input matInput placeholder="Nome">
+        <input matInput placeholder="Nome" type="text" #nome>
     </mat-form-field>
 
     <mat-form-field class="width-box">
-        <input matInput placeholder="E-mail">
+        <input matInput placeholder="E-mail" type="email" #email>
     </mat-form-field>
     <mat-form-field class="width-box">
-        <input matInput placeholder="Telefone">
+        <input matInput form-control placeholder="Telefone" type="number" #telefone>
     </mat-form-field>
-    <button mat-button mat-raised-button color="primary" matBadge="8" matBadgePosition="before">Cadastrar</button>
+    <button mat-button mat-raised-button btn btn-block color="primary" matBadge="8" matBadgePosition="before" >Cadastrar</button>
 </form>

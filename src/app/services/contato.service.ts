@@ -7,7 +7,11 @@ import { Contato } from '../models/contato';
 })
 export class ContatoService {
   contatos: Contato[];
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { 
+    this.contatos = [
+      {nome: 'teste', email: 'teste@teste.com', telefone: '5469854758'}
+    ]
+  }
 
   salvar(contato: Contato){
     this.contatos.push(contato);
@@ -22,5 +26,14 @@ export class ContatoService {
       localStorage.setItem('tasks', JSON.stringify(contatos));
     }
 
+  }
+
+  getContacts(){
+      return this.contatos;
+  }
+
+  addContato(contato: Contato){
+    this.contatos.push(contato);
+    return false;
   }
 }
