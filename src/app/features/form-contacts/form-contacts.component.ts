@@ -19,7 +19,9 @@ export class FormContactsComponent {
       email: email.value,
       telefone: telefone.value   
     });
-    
+    nome.value = '';
+    email.value = '';
+    telefone.value = '';
     return false;
   }
 }

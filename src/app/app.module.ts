@@ -18,7 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { ContactsComponent } from './features/contacts/contacts.component';
 import { ListContactsComponent } from './features/list-contacts/list-contacts.component';
-import { MatDialogModule, MatInputModule, MatFormFieldModule, MatOptionModule, MatSelectModule, MatError, MatHint } from '@angular/material';
+import { MatDialogModule, MatInputModule, MatFormFieldModule, MatOptionModule, MatSelectModule} from '@angular/material';
 import { FormContactsComponent } from './features/form-contacts/form-contacts.component';
 import { ContatoService } from './services/contato.service';
 

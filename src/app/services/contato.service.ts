@@ -8,13 +8,10 @@ import { Contato } from '../models/contato';
 export class ContatoService {
   contatos: Contato[];
   constructor(private http: HttpClient) { 
-    this.contatos = [
-      {nome: 'teste', email: 'teste@teste.com', telefone: '5469854758'}
-    ]
+   this.contatos = [ ]
   }
 
   salvar(contato: Contato){
-    this.contatos.push(contato);
     let contatos = [];
     if(localStorage.getItem('contatos') === null) {
       contatos = [];
@@ -29,11 +26,26 @@ export class ContatoService {
   }
 
   getContacts(){
+    if(localStorage.getItem('contatos') === null) {
       return this.contatos;
+    }else{
+      this.contatos = JSON.parse(localStorage.getItem('contatos'));
+      return this.contatos;
+    }
+     
   }
 
   addContato(contato: Contato){
     this.contatos.push(contato);
+    let contatos: Contato[] = [];
+    if(localStorage.getItem('contatos') === null){
+      contatos.push(contato);
+      localStorage.setItem('contatos', JSON.stringify(contatos));
+    }else{
+      contatos = JSON.parse(localStorage.getItem('contatos'));
+      contatos.push(contato); 
+      localStorage.setItem('contatos', JSON.stringify(contatos));
+    }
     return false;
   }
 }
