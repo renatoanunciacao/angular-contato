@@ -1,5 +1,3 @@
-{{contatos.length}}
-<app-contacts *ngIf="{{ contatos.length }}">Não há contatos cadastrados.</app-contacts>
 <app-contacts *ngFor="let contato of contatos" [contato]="contato">
 
 </app-contacts>
