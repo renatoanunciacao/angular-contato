@@ -1,8 +1,14 @@
-<mat-card> 
-      <mat-icon matListIcon>folder</mat-icon>
-      <mat-card-title> {{contato.nome}} </mat-card-title>
-      <p matLine>
-        <span> {{contato.email}} </span>
-        <span class="demo-2"> -- {{contato.telefone}} </span>
-      </p>
-  </mat-card>
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-description>
+      <mat-icon> contact_phone</mat-icon><span class="contact-nome"> {{contato.nome}} </span>
+      <mat-icon> email</mat-icon> <span class="contact-email"> {{contato.email }} </span>
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  
+    <mat-icon> settings_phone </mat-icon>
+    <span class="contact-number">
+       {{contato.telefone }}
+    </span>
+  
+</mat-expansion-panel>

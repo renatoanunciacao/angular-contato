@@ -1,13 +1,27 @@
-<form class="example-form" (submit)="addContact(nome,email,telefone)">
-    <mat-form-field class="width-box">
-        <input matInput placeholder="Nome" type="text" #nome>
-    </mat-form-field>
+<mat-expansion-panel>
+    <mat-expansion-panel-header>
+        <mat-panel-description>
+            Cadastro de Contatos
+        </mat-panel-description>
+    </mat-expansion-panel-header>
+    <mat-card>
+        <form class="example-form" (submit)="addContact(nome,email,telefone)">
+            <mat-form-field class="width-box">
+                <input matInput placeholder="Informe seu nome" type="text" required #nome>
+            </mat-form-field>
 
-    <mat-form-field class="width-box">
-        <input matInput placeholder="E-mail" type="email" #email>
-    </mat-form-field>
-    <mat-form-field class="width-box">
-        <input matInput form-control placeholder="Telefone" type="number" #telefone>
-    </mat-form-field>
-    <button mat-button mat-raised-button btn btn-block color="primary" matBadge="8" matBadgePosition="before" >Cadastrar</button>
-</form>
+            <mat-form-field class="width-box">
+                <input matInput placeholder="Informe seu e-mail" type="email" required #email>
+            </mat-form-field>
+
+            <mat-form-field class="width-box">
+                <input matInput form-control type="text" mask="(00)0000-00000"
+                    placeholder="Informe seu telefone" required #telefone>
+            </mat-form-field>
+            <mat-card-actions>
+                <button mat-button mat-raised-button btn btn-block class="cadastrar" color="primary"
+                    matBadge="8" matBadgePosition="before">Cadastrar</button>
+            </mat-card-actions>
+        </form>
+    </mat-card>
+</mat-expansion-panel>

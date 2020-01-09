@@ -11,19 +11,6 @@ export class ContatoService {
    this.contatos = [ ]
   }
 
-  salvar(contato: Contato){
-    let contatos = [];
-    if(localStorage.getItem('contatos') === null) {
-      contatos = [];
-      contatos.push(contato);
-      localStorage.setItem('contatos', JSON.stringify(contatos));
-    } else {
-      contatos = JSON.parse(localStorage.getItem('contatos'));
-      contatos.push(contato); 
-      localStorage.setItem('tasks', JSON.stringify(contatos));
-    }
-
-  }
 
   getContacts(){
     if(localStorage.getItem('contatos') === null) {

@@ -18,15 +18,17 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { ContactsComponent } from './features/contacts/contacts.component';
 import { ListContactsComponent } from './features/list-contacts/list-contacts.component';
-import { MatDialogModule, MatInputModule, MatFormFieldModule, MatOptionModule, MatSelectModule} from '@angular/material';
+import { MatDialogModule, MatInputModule, MatFormFieldModule, MatOptionModule, MatSelectModule, MatExpansionModule} from '@angular/material';
 import { FormContactsComponent } from './features/form-contacts/form-contacts.component';
 import { ContatoService } from './services/contato.service';
+import { TextMaskModule } from 'angular2-text-mask';
+import { FormsModule,  ReactiveFormsModule } from '@angular/forms';
+import { NgxMaskModule } from 'ngx-mask';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    DetalheComponent,
     HeaderComponent,
     SearchComponent,
     ContactsComponent,
@@ -47,8 +49,12 @@ import { ContatoService } from './services/contato.service';
     MatInputModule,
     MatFormFieldModule,
     MatOptionModule,
-    MatSelectModule
-  ],
+    MatSelectModule,
+    MatExpansionModule,
+    FormsModule,
+    ReactiveFormsModule, 
+    NgxMaskModule.forRoot()
+],
   providers: [ContatoService],
   bootstrap: [AppComponent]
 })

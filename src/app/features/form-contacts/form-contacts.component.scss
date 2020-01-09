@@ -1,9 +1,19 @@
 .example-form {
-    min-width: 150px;
-    max-width: 500px;
-    width: 100%;
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.width-box {
+  width: 100%;
+}
+
+.cadastrar {
+  margin-left: 170px !important;
+}
+
+@media (max-width: 768px) {
+  .cadastrar {
+    margin-left: 122px !important;
   }
-  
-  .width-box {
-    width: 100%;
-  }
+}
