@@ -1,3 +1,7 @@
+
+<div class="center-box" *ngIf='contatos.length == 0'>
+    <h4>Nenhum contato cadastrado.</h4>
+</div>
 <app-contacts *ngFor="let contato of contatos" [contato]="contato">
 
 </app-contacts>
